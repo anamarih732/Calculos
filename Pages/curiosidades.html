@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos de Curiosidades</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/curiosidades.css">
+</head>
+<body>
+    <h1>Cálculos de Curiosidades</h1>
+    <div class="geral">
+        <div class="card">
+            <h2>Quanto tempo vai demorar o vídeo?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular quantos minutos ou horas vai demorar para assistir algo em uma velocidade diferente da normal.</p>
+                </details>   
+            </div>      
+            <form onsubmit="velocidadeVideo(); return false;"> 
+                <label for="tempo-inicio">Qual a duração original?</label>
+                <input id="tempo-inicio" name="tempo-inicio" type="time" required>
+                <label for="velocidade">Em que velocidade você quer assistir?</label>
+                <input id="velocidade" name="velocidade" type="number" placeholder="Ex: 1.5x" step="any" min="0.1" required>
+                <button class="laranja">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="curiosidades1"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Qual sua altura estimada com base na altura dos seus pais?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular a altura média esperada com base na altura dos seus pais.</p>
+                </details>   
+            </div>    
+            <form onsubmit="alturaMedia(); return false;">    
+                <label for="altura-mae">Altura da sua mãe (cm):</label>
+                <input id="altura-mae" name="altura-mae" type="number" placeholder="Ex: 160" min="40" required>
+                <label for="altura-pai">Altura do seu pai (cm):</label>
+                <input id="altura-pai" name="altura-pai" type="number" placeholder="Ex: 180" min="40" required>
+                <label for="genero-masc-pais">Selecione seu gênero:</label>
+                <div id="generos-pais">                
+                    <input id="genero-masc-pais" name="genero" type="radio" value="masculino" required>
+                    <label for="genero-masc-pais">Masculino</label>
+
+                    <input id="genero-fem-pais" name="genero" type="radio" value="feminino">
+                    <label for="genero-fem-pais">Feminino</label>
+                </div>
+                <button class="laranja">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="curiosidades2"></p>
+                <p id="curiosidades2-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mariana A.<br>
+           © 2026</p>
+    </footer>
+    <script src="../JS/curiosidades.js"></script>
+</body>
+</html>

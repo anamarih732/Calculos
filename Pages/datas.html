@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Datas</title>
+    <link rel="stylesheet" href="../../CSS/global.css">
+    <link rel="stylesheet" href="../../CSS/datas.css">
+</head>
+<body>
+    <h1>Cálculo de Datas</h1>
+    <div class="geral">
+        <div class="card">
+            <h2>Quanto tempo falta?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular quanto tempo falta para uma data de aniversário, um feriado, uma data comemorativa, o vencimento de um produto, etc.</p>
+                </details>   
+            </div>        
+            <label for="data-falta">Digite a data de interesse:</label>
+            <input id="data-falta" name="data-falta" type="date">
+            <button class="lilas">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h2>Quanto tempo faz?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular quantos anos alguém tem ou quanto tempo faz que algo aconteceu, etc.</p>
+                </details>
+            </div>
+            <label for="data-tempofaz">Digite a data de interesse:</label>
+            <input id="data-tempofaz" name="data-tempofaz" type="date">
+            <button class="lilas">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h2>Diferença entre datas</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular qual a diferença entre duas datas. Serve para calcular a diferença de idade entre duas pessoas, quantos anos alguém tinha em certa data, quanto que algo durou, etc.</p>
+                </details>
+            </div>
+            <label for="data-diferenca1">Digite a 1ª data:</label>
+            <input id="data-diferenca1" name="data-diferenca1" type="date">
+            <label for="data-diferenca2">Digite a 2ª data:</label>
+            <input id="data-diferenca2" name="data-diferenca2" type="date">
+            <button class="lilas">Calcular</button>
+        </div>
+        
+        <div class="card">
+            <h2>Somar ou subtrair dias</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular a data resultante ao somar ou subtrair dias de uma data específica.</p>    
+                </details>       
+            </div>
+            <label for="data-base">Digite a data base:</label>
+            <input id="data-base" name="data-base" type="date">
+            <label for="dias">Digite o número de dias (negativos subtraem):</label>
+            <input id="dias" name="dias" type="number">
+            <button class="lilas">Calcular</button>
+        </div>
+        <div class="card">
+            <h2>Que dia da semana foi ou será?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular qual dia da semana uma data específica cai.</p>
+                </details>
+            </div>
+            <label for="data-dia">Digite a data de interesse:</label>
+            <input id="data-dia" name="data-dia" type="date">
+            <button class="lilas">Calcular</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mariana A.<br>
+           © 2026</p>
+    </footer>
+
+    <script src="../JS/datas.js"></script>
+</body>
+</html>

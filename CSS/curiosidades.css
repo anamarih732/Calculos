@@ -1,0 +1,16 @@
+h2 {
+    background: var(--laranja);
+}
+details {   
+    background: var(--laranja);
+    border: 3px solid var(--laranja);
+    
+}
+.card {
+    background: rgba(252, 172, 53, 0.3);
+}
+#generos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

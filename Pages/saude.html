@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos de Saúde</title>
+    <link rel="stylesheet" href="../../CSS/global.css">
+    <link rel="stylesheet" href="../../CSS/saude.css">
+</head>
+<body>
+    <h1>Cálculos de Saúde</h1>
+    <div class="geral">
+        <div class="card">
+            <h2>Calcular IMC (19 a 59 anos)</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular o seu Índice de Massa Corporal (IMC).</p>
+                </details>   
+            </div>     
+            <form onsubmit="calcularIMC(); return false;">   
+                <label for="altura">Digite sua altura (cm):</label>
+                <input id="altura" name="altura" type="number" placeholder="Ex: 170" min="10" required>
+                <label for="peso">Digite seu peso (kg):</label>
+                <input id="peso" name="peso" type="number" placeholder="Ex: 80" min="0.5 " step="any" required>
+                <button class="vermelho">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="saude1"></p>
+                <p id="saude1-1"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Calcular Relação Cintura-Quadril (RCQ)</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular sua relação cintura-quadril, que avalia a quantidade de gordura abdominal e o risco de doenças do coração e diabetes.</p>
+                </details>
+            </div>
+            <form onsubmit="calcularRCQ(); return false;">
+                <label for="cintura">Digite a circunferência da cintura (cm):</label>
+                <input id="cintura" name="cintura" type="number" placeholder="Ex: 80" min="0" step="any" required>
+                <label for="quadril">Digite a circunferência do quadril (cm):</label>
+                <input id="quadril" name="quadril" type="number" placeholder="Ex: 90" min="0" step="any" required>
+                <label for="genero-masc">Selecione seu gênero:</label>
+                <div id="generos-rcq">                
+                    <input id="genero-masc-rcq" name="genero" type="radio" value="masculino" required>
+                    <label for="genero-masc-rcq">Masculino</label>
+
+                    <input id="genero-fem-rcq" name="genero" type="radio" value="feminino" required>
+                    <label for="genero-fem-rcq">Feminino</label>
+                </div>
+                <button class="vermelho">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="saude2"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Você bebe água o suficiente?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular quanto de água você deve beber de acordo com sua idade e seu peso.</p>
+                </details>
+            </div>
+            <label for="idade-agua">Digite sua idade:</label>
+            <input id="idade-agua" name="idade-agua" type="number" placeholder="Ex: 20" min="0">
+            <label for="peso">Digite seu peso (kg):</label>
+            <input id="peso" name="peso" type="number" placeholder="Ex: 70" min="0">
+            <button class="vermelho">Calcular</button>
+        </div>
+        
+        <div class="card">
+            <h2>Você dorme o suficiente?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular se você está dormindo a quantidade de horas suficientes para a sua faixa etária.</p>    
+                </details>       
+            </div>
+            <label for="idade-sono">Digite a sua idade:</label>
+            <input id="idade-sono" name="idade-sono" type="number" placeholder="Ex: 20" min="0">
+            <label for="dorme">Que horas você dorme?</label>
+            <input id="dorme" name="dorme" type="time">
+            <label for="acorda">Que horas você acorda?</label>
+            <input id="acorda" name="acorda" type="time">
+            <button class="vermelho">Calcular</button>
+        </div>
+        <div class="card">
+            <h2>Que horas devo dormir?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular que horas você deve dormir para ter X horas de sono.</p>
+                </details>
+            </div>
+            <label for="horas-sono">Quantas horas de sono quer ter?</label>
+            <input id="horas-sono" name="horas-sono" type="number" placeholder="Ex: 8" min="0">
+            <label for="acordar-sono">Que horas precisa acordar?</label>
+            <input id="acordar-sono" name="acordar-sono" type="time">
+            <button class="vermelho">Calcular</button>
+        </div>
+        <div class="card">
+            <h2>Que dia da semana foi ou será?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular qual dia da semana uma data específica cai.</p>
+                </details>
+            </div>
+            <label for="data-dia">Digite a data de interesse:</label>
+            <input id="data-dia" name="data-dia" type="date">
+            <button class="vermelho">Calcular</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mariana A.<br>
+           © 2026</p>
+    </footer>
+
+    <script src="../JS/saude.js"></script>
+</body>
+</html>

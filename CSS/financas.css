@@ -1,0 +1,11 @@
+h2 {
+    background: var(--verde);
+}
+details {   
+    background: var(--verde);
+    border: 3px solid var(--verde);
+    
+}
+.card {
+    background: rgba(70, 162, 72, 0.3);
+}

@@ -1,0 +1,11 @@
+h2 {
+    background: var(--azul);
+}
+details {   
+    background: var(--azul);
+    border: 3px solid var(--azul);
+    
+}
+.card {
+    background: rgba(40, 188, 252, 0.3);
+}

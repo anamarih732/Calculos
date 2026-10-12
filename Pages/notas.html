@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Notas</title>
+    <link rel="stylesheet" href="../../CSS/global.css">
+    <link rel="stylesheet" href="../../CSS/notas.css">
+</head>
+<body>
+    <h1>Cálculo de Notas</h1>
+    <div class="geral">
+        <div class="card">
+            <h2>Qual seu nível de aproveitamento?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular em porcentagem qual o nível de aproveitamento de uma prova, trabalho, disciplina, etc.</p>
+                </details>   
+            </div> 
+            <form onsubmit="AproveitamentoAluno(); return false;">     
+                <label for="nota-total">Quanto valia:</label>
+                <input id="nota-total" name="nota-total" type="number" step="any" placeholder="Ex: 10" min="0" required>
+                <label for="nota-obtida">Quanto você tirou:</label>
+                <input id="nota-obtida" name="nota-obtida" type="number" step="any" placeholder="Ex: 8" min="0" required>
+                <button class="azul">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="notas1"></p>
+                <p id="notas1-1"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Qual seria sua nota no sistema dos EUA?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular qual nota alfabética você tiraria se estivesse nos EUA.</p>
+                </details>   
+            </div>    
+            <form onsubmit="NotaEUA(); return false;">   
+                <label for="nota-total2">Quanto valia:</label>
+                <input id="nota-total2" name="nota-total2" type="number" step="any"placeholder="Ex: 10" min="0" required>
+                <label for="nota-obtida2">Quanto você tirou:</label>
+                <input id="nota-obtida2" name="nota-obtida2" type="number" step="any" placeholder="Ex: 8" min="0" required>
+                <button class="azul">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="notas2"></p>
+                <p id="notas2-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mariana A.<br>
+           © 2026</p>
+    </footer>
+    <script src="../JS/notas.js"></script>
+</body>
+</html>

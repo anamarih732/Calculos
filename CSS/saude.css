@@ -1,0 +1,16 @@
+h2 {
+    background: var(--vermelho);
+}
+details {   
+    background: var(--vermelho);
+    border: 3px solid var(--vermelho);
+    
+}
+.card {
+    background: rgba(254, 81, 81, 0.3);
+}
+#generos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

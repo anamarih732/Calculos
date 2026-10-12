@@ -1,0 +1,12 @@
+h2 {
+    background: var(--lilas);
+}
+details {   
+    background: var(--lilas);
+    border: 3px solid var(--lilas);
+    margin-top: 40px;
+    
+}
+.card {
+    background: rgb(255, 160, 255, 0.3);
+}

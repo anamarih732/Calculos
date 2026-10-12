@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos Financeiros</title>
+    <link rel="stylesheet" href="../../CSS/global.css">
+    <link rel="stylesheet" href="../../CSS/financas.css">
+</head>
+<body>
+    <h1>Cálculos Financeiros</h1>
+    <div class="geral">
+        <div class="card">
+            <h2>Juros Simples e Montante</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular juros simples mês a mês de operações financeiras e o montante final.</p>
+                </details>   
+            </div>        
+            <label for="j-simples">Valor do capital inicial (R$):</label>
+            <input id="j-simples" name="j-simples" type="text" placeholder="Ex: 1000,00">
+            <label for="taxa">Taxa de Juros (%):</label>
+            <input id="taxa" name="taxa" type="text" placeholder="Ex: 5%">
+            <label for="tempo">Tempo (em meses):</label>
+            <input id="tempo" name="tempo" type="text" placeholder="Ex: 12">
+            <button class="verde">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h2>Juros Compostos e Montante</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular juros compostos mês a mês de operações financeiras e o montante final.</p>
+                </details>   
+            </div>        
+            <label for="j-compostos">Valor do capital inicial (R$):</label>
+            <input id="j-compostos" name="j-compostos" type="text" placeholder="Ex: 1000,00">
+            <label for="taxa2">Taxa de Juros (%):</label>
+            <input id="taxa2" name="taxa2" type="text" placeholder="Ex: 5%">
+            <label for="tempo2">Tempo (em meses):</label>
+            <input id="tempo2" name="tempo2" type="text" placeholder="Ex: 12">
+            <button class="verde">Calcular</button>
+        </div>
+
+        <div class="card">
+            <h2>Quantos % de aumento ou desconto?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular quantos porcento um produto teve de aumento ou desconto em seu preço.</p>
+                </details>
+            </div>
+            <label for="preco-inicial">Digite o preço antigo (R$):</label>
+            <input id="preco-inicial" name="preco-inicial" type="text" placeholder="Ex: 100,00">
+            <label for="preco-final">Digite o preço atual (R$):</label>
+            <input id="preco-final" name="preco-final" type="text" placeholder="Ex: 105,00">
+            <button class="verde">Calcular</button>
+        </div>
+        
+        <div class="card">
+            <h2>Pagar à vista ou parcelado?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular qual opção vale mais à pena no seu caso: pagar o produto à vista ou pagar parcelado.</p>    
+                </details>       
+            </div>
+            <label for="vista">Valor total (R$):</label>
+            <input id="vista" name="vista" type="text" placeholder="Ex: 1000,00">
+            <label for="vista">Valor à vista (R$):</label>
+            <input id="vista" name="vista" type="text" placeholder="Ex: 950,00">
+            <label for="vista">Quantidade de parcelas:</label>
+            <input id="vista" name="vista" type="text" placeholder="Ex: 5">
+            <label for="vista">Valor de cada parcela (R$):</label>
+            <input id="vista" name="vista" type="text" placeholder="Ex: 200,00">
+            <label for="vista">Valor do juros (%):</label>
+            <input id="vista" name="vista" type="text" placeholder="Ex: 1%">
+            <label for="dias">Digite o número de dias (negativos subtraem):</label>
+            <input id="dias" name="dias" type="number">
+            <button class="verde">Calcular</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mariana A.<br>
+           © 2026</p>
+    </footer>
+
+    <script src="../JS/financas.js"></script>
+</body>
+</html>

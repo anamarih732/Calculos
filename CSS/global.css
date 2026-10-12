@@ -168,3 +168,9 @@ form {
     border-radius: var(--borda);
     padding: 10px;
 }
+.aviso {
+    background: var(--verde-musgo);
+    padding: 10px;
+    border-radius: var(--borda);
+    margin: 40px;
+};

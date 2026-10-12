@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculos de Saúde</title>
-    <link rel="stylesheet" href="../../CSS/global.css">
-    <link rel="stylesheet" href="../../CSS/saude.css">
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/saude.css">
 </head>
 <body>
     <h1>Cálculos de Saúde</h1>
+    <p class="aviso"> ATENÇÃO: Estes cálculos são apenas para fins informativos e não substituem a consulta a um profissional de saúde.</p>
     <div class="geral">
         <div class="card">
             <h2>Calcular IMC (19 a 59 anos)</h2>
@@ -20,9 +21,9 @@
             </div>     
             <form onsubmit="calcularIMC(); return false;">   
                 <label for="altura">Digite sua altura (cm):</label>
-                <input id="altura" name="altura" type="number" placeholder="Ex: 170" min="10" required>
+                <input id="altura" name="altura" type="number" placeholder="Ex: 170" min="10" max="250" required>
                 <label for="peso">Digite seu peso (kg):</label>
-                <input id="peso" name="peso" type="number" placeholder="Ex: 80" min="0.5 " step="any" required>
+                <input id="peso" name="peso" type="number" placeholder="Ex: 80" min="0.5" max="500" step="any" required>
                 <button class="vermelho">Calcular</button>
             </form>
             <div class="resposta">
@@ -41,9 +42,9 @@
             </div>
             <form onsubmit="calcularRCQ(); return false;">
                 <label for="cintura">Digite a circunferência da cintura (cm):</label>
-                <input id="cintura" name="cintura" type="number" placeholder="Ex: 80" min="0" step="any" required>
+                <input id="cintura" name="cintura" type="number" placeholder="Ex: 80" min="20" max="200" step="any" required>
                 <label for="quadril">Digite a circunferência do quadril (cm):</label>
-                <input id="quadril" name="quadril" type="number" placeholder="Ex: 90" min="0" step="any" required>
+                <input id="quadril" name="quadril" type="number" placeholder="Ex: 90" min="30" max="250" step="any" required>
                 <label for="genero-masc">Selecione seu gênero:</label>
                 <div id="generos-rcq">                
                     <input id="genero-masc-rcq" name="genero" type="radio" value="masculino" required>
@@ -60,18 +61,23 @@
         </div>
 
         <div class="card">
-            <h2>Você bebe água o suficiente?</h2>
+            <h2>Quantos litros de água você deve beber por dia?</h2>
             <div>
                 <details>
                     <summary>Saiba mais</summary>
                     <p>Use este campo para calcular quanto de água você deve beber de acordo com sua idade e seu peso.</p>
                 </details>
             </div>
-            <label for="idade-agua">Digite sua idade:</label>
-            <input id="idade-agua" name="idade-agua" type="number" placeholder="Ex: 20" min="0">
-            <label for="peso">Digite seu peso (kg):</label>
-            <input id="peso" name="peso" type="number" placeholder="Ex: 70" min="0">
-            <button class="vermelho">Calcular</button>
+            <form onsubmit ="calcularAgua(); return false;">
+                <label for="idade-agua">Digite sua idade:</label>
+                <input id="idade-agua" name="idade-agua" type="number" placeholder="Ex: 20" min="0" max="120" required>
+                <label for="peso-agua">Digite seu peso (kg):</label>
+                <input id="peso-agua" name="peso-agua" type="number" placeholder="Ex: 70" min="1" max="500" step="any" required>
+                <button class="vermelho">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="saude3"></p>
+            </div>
         </div>
         
         <div class="card">
@@ -82,13 +88,19 @@
                     <p>Use este campo para calcular se você está dormindo a quantidade de horas suficientes para a sua faixa etária.</p>    
                 </details>       
             </div>
-            <label for="idade-sono">Digite a sua idade:</label>
-            <input id="idade-sono" name="idade-sono" type="number" placeholder="Ex: 20" min="0">
-            <label for="dorme">Que horas você dorme?</label>
-            <input id="dorme" name="dorme" type="time">
-            <label for="acorda">Que horas você acorda?</label>
-            <input id="acorda" name="acorda" type="time">
-            <button class="vermelho">Calcular</button>
+            <form onsubmit="calcularSono(); return false;">
+                <label for="idade-sono">Digite a sua idade:</label>
+                <input id="idade-sono" name="idade-sono" type="number" placeholder="Ex: 20" min="0" max="120" required>
+                <label for="dorme">Que horas você dorme?</label>
+                <input id="dorme" name="dorme" type="time" required>
+                <label for="acorda">Que horas você acorda?</label>
+                <input id="acorda" name="acorda" type="time" required>
+                <button class="vermelho">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="saude4"></p>
+                <p id="saude4-1"></p>
+            </div>
         </div>
         <div class="card">
             <h2>Que horas devo dormir?</h2>
@@ -98,23 +110,16 @@
                     <p>Use este campo para calcular que horas você deve dormir para ter X horas de sono.</p>
                 </details>
             </div>
-            <label for="horas-sono">Quantas horas de sono quer ter?</label>
-            <input id="horas-sono" name="horas-sono" type="number" placeholder="Ex: 8" min="0">
-            <label for="acordar-sono">Que horas precisa acordar?</label>
-            <input id="acordar-sono" name="acordar-sono" type="time">
-            <button class="vermelho">Calcular</button>
-        </div>
-        <div class="card">
-            <h2>Que dia da semana foi ou será?</h2>
-            <div>
-                <details>
-                    <summary>Saiba mais</summary>
-                    <p>Use este campo para calcular qual dia da semana uma data específica cai.</p>
-                </details>
+            <form onsubmit="calcularHoraDormir(); return false;">
+                <label for="horas-sono">Quantas horas de sono quer ter?</label>
+                <input id="horas-sono" name="horas-sono" type="number" placeholder="Ex: 8" min="0.5" max="24"step="0.5" required>
+                <label for="acordar-sono">Que horas precisa acordar?</label>
+                <input id="acordar-sono" name="acordar-sono" type="time" required>
+                <button class="vermelho">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="saude5"></p>
             </div>
-            <label for="data-dia">Digite a data de interesse:</label>
-            <input id="data-dia" name="data-dia" type="date">
-            <button class="vermelho">Calcular</button>
         </div>
     </div>
 

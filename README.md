@@ -1,5 +1,8 @@
 # Calculadora Versátil - EM ANDAMENTO
 
+![Descrição da imagem](tela-inicial.png)
+
+
 ## 📌 Descrição
 
 Desenvolvi este site com o objetivo de facilitar cálculos do dia a dia, sem a necessidade de pesquisar fórmulas, variáveis ou perder tempo com contas mais trabalhosas.

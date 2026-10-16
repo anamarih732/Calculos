@@ -58,6 +58,26 @@
                 <p id="curiosidades2-2"></p>
             </div>
         </div>
+
+        <div class="card">
+            <h2>Que horas devo dormir?</h2>
+            <div>
+                <details>
+                    <summary>Saiba mais</summary>
+                    <p>Use este campo para calcular que horas você deve dormir para ter X horas de sono.</p>
+                </details>
+            </div>
+            <form onsubmit="calcularHoraDormir(); return false;">
+                <label for="horas-sono">Quantas horas de sono quer ter?</label>
+                <input id="horas-sono" name="horas-sono" type="number" placeholder="Ex: 8" min="0.5" max="24"step="0.5" required>
+                <label for="acordar-sono">Que horas precisa acordar?</label>
+                <input id="acordar-sono" name="acordar-sono" type="time" required>
+                <button class="laranja">Calcular</button>
+            </form>
+            <div class="resposta">
+                <p id="curiosidades3"></p>
+            </div>
+        </div>
     </div>
 
     <footer>

@@ -52,3 +52,23 @@ function alturaMedia() {
     document.getElementById("curiosidades2-2").innerHTML = `A margem de variação fica entre ${altura_min}cm e ${altura_max}cm.`;  
 };
  
+function calcularHoraDormir() {
+    const horasSono = Number(document.getElementById("horas-sono").value);
+    const horaAcordar = document.getElementById("acordar-sono").value;
+
+    const [horas, minutos] = horaAcordar.split(":").map(Number);
+
+    const minutosAcordar = horas * 60 + minutos;
+    const minutosSono = Math.round(horasSono * 60);
+
+    const minutosDormir = (minutosAcordar - minutosSono + 1440) % 1440;
+
+    const horaDormir = String(Math.floor(minutosDormir / 60)).padStart(2, "0");
+
+    const minutoDormir = String(minutosDormir % 60).padStart(2, "0");
+
+    let div = document.getElementsByClassName("resposta")[2];
+    div.style.backgroundColor = laranja;
+
+    document.getElementById("curiosidades3").innerHTML = `Para dormir ${horasSono.toLocaleString("pt-BR")} horas, você deve dormir às ${horaDormir}:${minutoDormir}hs.`;
+};

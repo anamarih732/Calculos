@@ -1,11 +1,32 @@
 h2 {
     background: var(--verde);
 }
+
 details {   
     background: var(--verde);
     border: 3px solid var(--verde);
-    
 }
+
 .card {
     background: rgba(70, 162, 72, 0.3);
+}
+
+.tabela-juros {
+    border-collapse: collapse;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.tabela-juros th,
+.tabela-juros td {
+    border: 2px solid white;
+    padding: 8px 12px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;
+}
+
+.tabela-juros th {
+    background: rgba(0, 0, 0, 0.12);
 }

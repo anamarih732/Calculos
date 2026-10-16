@@ -34,4 +34,4 @@ O site base está desenvolvido, mas podem haver atualizações com novos cálcul
 
 Para acessar o site em funcionamento, basta clicar no link abaixo:
 
-**[https://anamarih732.github.io/Calculos/](link)**
+https://anamarih732.github.io/Calculos/

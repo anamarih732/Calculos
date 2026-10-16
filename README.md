@@ -1,4 +1,4 @@
-# Calculadora Versátil - EM ANDAMENTO
+# Calculadora Versátil 
 
 ![Descrição da imagem](tela-inicial.png)
 
@@ -7,7 +7,7 @@
 
 Desenvolvi este site com o objetivo de facilitar cálculos do dia a dia, sem a necessidade de pesquisar fórmulas, variáveis ou perder tempo com contas mais trabalhosas.
 
-A calculadora reúne diferentes tipos de cálculos de diversas áreas, tornando o processo mais rápido, prático e acessível.
+O site reúne diferentes tipos de cálculos de diversas áreas, tornando o processo mais rápido, prático e acessível.
 
 ## 🧮 Funcionalidades
 
@@ -24,13 +24,14 @@ O site permite realizar cálculos rápidos e práticos nas seguintes áreas:
 * HTML
 * CSS
 * JavaScript
+* Ícones do site Lucide (https://lucide.dev/icons/)
 
 ## 🔄 Atualizações
 
-O site está em desenvolvimento, com algumas funcionalidades já implementadas e outras não.
+O site base está desenvolvido, mas podem haver atualizações com novos cálculos, áreas e correções de bugs.
 
 ## 🌐 Acesso
 
-Para acessar o site futuramente, basta clicar no link abaixo:
+Para acessar o site em funcionamento, basta clicar no link abaixo:
 
-**[Link futuro do GitHub Pages](link)**
+**[https://anamarih732.github.io/Calculos/](link)**
